@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-    <Resource auth="Container"
-        type="javax.sql.DataSource"
-        driverClassName="org.h2.Driver"
-        name="jdbc/h2-ds"
-        username="sa"
-        password="sa"
-        url="jdbc:h2:mem:test" /> 
+	<Resource auth="Container"
+		type="javax.sql.DataSource"
+		url="jdbc:h2:mem:test"
+		driverClassName="org.h2.Driver"
+		name="jdbc/h2DataSource"
+		user="sa"
+		password="" />
 </Context>
