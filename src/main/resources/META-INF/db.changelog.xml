@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd" />
-<changeset author="PomCompot" id="1">
-	<createTable tableName="Person">
-		<column name="id" type="VARCHAR(255)">
-			<constraints nullable="false" primaryKey="true"
-				primaryKeyName="CONSTRAINT_8" />
-		</column>
-		<column name="firstname" type="VARCHAR(255)" />
-		<column name="lastname" type="VARCHAR(255)" />
-		<column name="birthDate" type="TIMESTAMP" />
-		<column name="gender" type="INT" />
-	</createTable>
-	<insert tableName="Person">
-        <column name="gender" value="M"/>
-        <column name="firstname" value="Charles-Henry"/>
-        <column name="lastname" value="de la Hauturie de Valet-Montchusson"/>
-        <column name="birthDate" value=""/>
-    </insert>
-</changeset>
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+	<changeSet author="PomCompot" id="1">
+		<createTable tableName="Person">
+			<column name="id" type="VARCHAR(255)" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true" 
+					primaryKeyName="CONSTRAINT_8" />
+			</column>
+			<column name="firstname" type="VARCHAR(255)" />
+			<column name="lastname" type="VARCHAR(255)" />
+			<column name="birthDate" type="TIMESTAMP" />
+			<column name="gender" type="VARCHAR(1)" />
+		</createTable>
+		<insert tableName="Person">
+	        <column name="gender" value="M"/>
+	        <column name="firstname" value="Charles-Henry"/>
+	        <column name="lastname" value="de la Hauturie de Valet-Montchusson"/>
+	        <column name="birthDate" value="1956-04-25 12:13:51"/>
+	    </insert>
+	</changeSet>
 </databaseChangeLog>

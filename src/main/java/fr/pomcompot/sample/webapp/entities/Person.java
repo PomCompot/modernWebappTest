@@ -3,6 +3,8 @@ package fr.pomcompot.sample.webapp.entities;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 import lombok.Data;
@@ -17,5 +19,6 @@ public class Person {
     
     private Date birthDate;
     
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 }
