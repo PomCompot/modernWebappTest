@@ -11,10 +11,10 @@
 			<column name="firstname" type="VARCHAR(255)" />
 			<column name="lastname" type="VARCHAR(255)" />
 			<column name="birthDate" type="TIMESTAMP" />
-			<column name="gender" type="VARCHAR(1)" />
+			<column name="gender" type="VARCHAR(4)" />
 		</createTable>
 		<insert tableName="Person">
-	        <column name="gender" value="M"/>
+	        <column name="gender" value="MALE"/>
 	        <column name="firstname" value="Charles-Henry"/>
 	        <column name="lastname" value="de la Hauturie de Valet-Montchusson"/>
 	        <column name="birthDate" value="1956-04-25 12:13:51"/>

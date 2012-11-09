@@ -87,7 +87,7 @@ appender("console", ConsoleAppender) {
   }
 }
 
-logger("org.springframework", INFO)
+logger("org.springframework", DEBUG)
 logger("com.h2database", INFO)
 logger("liquibase", INFO)
 
