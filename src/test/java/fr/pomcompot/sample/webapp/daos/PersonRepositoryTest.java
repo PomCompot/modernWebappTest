@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"/applicationContext.xml"})
-public class PersonDaoTest {
+public class PersonRepositoryTest {
 	@Resource
 	private PersonRepository personRepository;
 	
@@ -22,6 +22,5 @@ public class PersonDaoTest {
 	@Test
 	public void testList() {
 		assertThat("Not the expected result.", personRepository.findAll(), allOf(notNullValue(), hasSize(1)));
-		
 	}
 }
