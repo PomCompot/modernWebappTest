@@ -6,7 +6,7 @@
 		<createTable tableName="Person">
 			<column name="id" type="VARCHAR(255)" autoIncrement="true">
 				<constraints nullable="false" primaryKey="true" 
-					primaryKeyName="CONSTRAINT_8" />
+					primaryKeyName="id" />
 			</column>
 			<column name="firstname" type="VARCHAR(255)" />
 			<column name="lastname" type="VARCHAR(255)" />
@@ -19,5 +19,14 @@
 	        <column name="lastname" value="de la Hauturie de Valet-Montchusson"/>
 	        <column name="birthDate" value="1956-04-25 12:13:51"/>
 	    </insert>
+	</changeSet>
+	<changeSet author="PomCompot" id="2">
+		<createTable tableName="Test">
+			<column name="id" type="VARCHAR(255)" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true" 
+					primaryKeyName="id" />
+			</column>
+			<column name="field" type="VARCHAR(255)" />
+		</createTable>
 	</changeSet>
 </databaseChangeLog>
